@@ -1,27 +1,4 @@
-# Animated Portfolio Website
 
-A heavily animated, dark-themed portfolio website built with React.js, Framer Motion, Three.js, and Particles.js. Features fullpage seamless transitions with unique animation styles per page, optimized for both mobile and desktop.
-
-## Features
-
-- **Hero + About Me Page**: 3D animated icons, interactive particles background, animated gradient blurs
-- **Call to Action Page**: Animated buttons with glowing effects and motion blur
-- **Downloadable Resume**: Stylish PDF resume link with hover animations
-- **Projects Page**: Grid/carousel of projects with 3D hover animations and lazy loading
-- **Skills Page**: Animated skill icons with proficiency counters/bars
-- **Contact Page**: Interactive email form with validation and success animation
-- **Featured Articles**: Blog/article list with smooth load-in and fade effects
-- **Coding Profiles**: Showcase cards linking to LeetCode, GitHub, Skill Rack
-- **Social Links**: LinkedIn, Instagram, GitHub, YouTube, Twitter with hover animations
-
-## Visual Features
-
-- Animated gradient blur backgrounds
-- Particles that interact with mouse movement
-- Each section/page feels like a mini experience
-- Cinematic and fluid transitions (no jank)
-- Full responsiveness for mobile/tablets
-- Dark theme with gradient accents
 
 ## Technologies Used
 
