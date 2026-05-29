@@ -6,7 +6,7 @@ import './SocialLinks.css';
 const SocialLinks = () => {
   const socialLinks = [
     { icon: FaLinkedin, url: 'https://www.linkedin.com/in/tamil-selvan-m-5a4a4b285/', label: 'LinkedIn' },
-    { icon: FaGithub, url: 'https://github.com', label: 'GitHub' },
+    { icon: FaGithub, url: 'https://github.com/Tamil-Selvan27', label: 'GitHub' },
     { icon: FaInstagram, url: 'https://instagram.com', label: 'Instagram' },
   ];
 
