@@ -124,21 +124,6 @@ const Contact = () => {
               disabled={loading}
             />
           </motion.form>
-
-          <motion.div className="contact-info" variants={containerVariants}>
-            <motion.div className="info-item" variants={itemVariants}>
-              <h3>Email</h3>
-              <p>your.email@example.com</p>
-            </motion.div>
-            <motion.div className="info-item" variants={itemVariants}>
-              <h3>Phone</h3>
-              <p>+1 (555) 123-4567</p>
-            </motion.div>
-            <motion.div className="info-item" variants={itemVariants}>
-              <h3>Location</h3>
-              <p>Your City, Your Country</p>
-            </motion.div>
-          </motion.div>
         </motion.div>
 
         {submitted && (

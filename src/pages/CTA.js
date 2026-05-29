@@ -58,8 +58,8 @@ const CTA = () => {
           </motion.div>
           <motion.div variants={itemVariants}>
             <AnimatedButton
-              text="📋 View Resume"
-              onClick={() => navigate('/resume')}
+              text="� View Projects"
+              onClick={() => navigate('/projects')}
               variant="secondary"
               size="large"
             />

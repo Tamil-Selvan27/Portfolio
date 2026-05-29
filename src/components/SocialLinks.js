@@ -5,12 +5,9 @@ import './SocialLinks.css';
 
 const SocialLinks = () => {
   const socialLinks = [
-    { icon: FaLinkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: FaLinkedin, url: 'https://www.linkedin.com/in/tamil-selvan-m-5a4a4b285/', label: 'LinkedIn' },
     { icon: FaGithub, url: 'https://github.com', label: 'GitHub' },
     { icon: FaInstagram, url: 'https://instagram.com', label: 'Instagram' },
-    { icon: FaYoutube, url: 'https://youtube.com', label: 'YouTube' },
-    { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
-    { icon: FaEnvelope, url: 'mailto:your.email@example.com', label: 'Email' },
   ];
 
   const containerVariants = {

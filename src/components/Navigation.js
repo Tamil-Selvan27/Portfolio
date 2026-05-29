@@ -10,7 +10,6 @@ const Navigation = ({ setCurrentPage }) => {
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'CTA', path: '/cta' },
-    { label: 'Resume', path: '/resume' },
     { label: 'Projects', path: '/projects' },
     { label: 'Skills', path: '/skills' },
     { label: 'Contact', path: '/contact' },

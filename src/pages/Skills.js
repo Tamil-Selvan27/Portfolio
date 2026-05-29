@@ -1,17 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import GradientBlur from '../components/GradientBlur';
-import { FaReact, FaNode, FaPython, FaDatabase, FaGit, FaLinux } from 'react-icons/fa';
+import { FaReact, FaBolt, FaDatabase, FaGitAlt } from 'react-icons/fa';
+import { SiTypescript, SiJavascript } from 'react-icons/si';
 import './Skills.css';
 
 const Skills = () => {
   const skills = [
     { icon: FaReact, name: 'React', level: 95 },
-    { icon: FaNode, name: 'Lit', level: 90 },
-    { icon: FaPython, name: 'TypeScript', level: 85 },
-    { icon: FaDatabase, name: 'JavaScript', level: 88 },
-    { icon: FaGit, name: 'Git', level: 92 },
-    { icon: FaLinux, name: 'Basics of SQL', level: 87 },
+    { icon: FaBolt, name: 'Lit', level: 90 },
+    { icon: SiTypescript, name: 'TypeScript', level: 85 },
+    { icon: SiJavascript, name: 'JavaScript', level: 88 },
+    { icon: FaGitAlt, name: 'Git', level: 92 },
+    { icon: FaDatabase, name: 'Basics of SQL', level: 87 },
   ];
 
   const containerVariants = {

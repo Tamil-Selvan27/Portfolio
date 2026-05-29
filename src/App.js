@@ -4,7 +4,6 @@ import Navigation from './components/Navigation';
 import ParticlesBackground from './components/ParticlesBackground';
 import HeroAbout from './pages/HeroAbout';
 import CTA from './pages/CTA';
-import Resume from './pages/Resume';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
@@ -24,7 +23,6 @@ function App() {
           <Routes>
             <Route path="/" element={<HeroAbout />} />
             <Route path="/cta" element={<CTA />} />
-            <Route path="/resume" element={<Resume />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />

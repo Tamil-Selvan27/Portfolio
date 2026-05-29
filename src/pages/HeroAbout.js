@@ -1,11 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import GradientBlur from '../components/GradientBlur';
 import SocialLinks from '../components/SocialLinks';
 import { FaCode, FaRocket, FaBrain } from 'react-icons/fa';
 import './HeroAbout.css';
 
+const roles = ['Frontend Developer', 'Designer'];
+
 const HeroAbout = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [cursorVisible, setCursorVisible] = useState(true);
+
+  useEffect(() => {
+    let currentRole = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let timeoutId;
+
+    const type = () => {
+      const fullText = roles[currentRole];
+      if (isDeleting) {
+        charIndex -= 1;
+        setDisplayText(fullText.slice(0, charIndex));
+      } else {
+        charIndex += 1;
+        setDisplayText(fullText.slice(0, charIndex));
+      }
+
+      if (!isDeleting && charIndex === fullText.length) {
+        timeoutId = window.setTimeout(() => {
+          isDeleting = true;
+          type();
+        }, 1200);
+        return;
+      }
+
+      if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        currentRole = (currentRole + 1) % roles.length;
+      }
+
+      const delay = isDeleting ? 60 : 120;
+      timeoutId = window.setTimeout(type, delay);
+    };
+
+    timeoutId = window.setTimeout(type, 800);
+    return () => window.clearTimeout(timeoutId);
+  }, []);
+
+  useEffect(() => {
+    const cursorInterval = window.setInterval(() => {
+      setCursorVisible((visible) => !visible);
+    }, 500);
+
+    return () => window.clearInterval(cursorInterval);
+  }, []);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -56,7 +105,9 @@ const HeroAbout = () => {
             </motion.span>
           </h1>
           <motion.p className="hero-subtitle" variants={itemVariants}>
-            Frontend Developer & Creative Problem Solver
+            <span>I'm a </span>
+            <span className="typewriter">{displayText}</span>
+            <span className="cursor">{cursorVisible ? '|' : ' '}</span>
           </motion.p>
         </motion.div>
 
@@ -70,7 +121,7 @@ const HeroAbout = () => {
 
         <motion.div className="achievements" variants={containerVariants}>
           {[
-            { icon: FaCode, title: '100+ Projects', desc: 'Successfully delivered' },
+            // { icon: FaCode, title: '100+ Projects', desc: 'Successfully delivered' },
             { icon: FaRocket, title: '2+ Years', desc: 'Industry Experience' },
             { icon: FaBrain, title: 'Tech Stack', desc: 'Always Learning' },
           ].map((achievement, index) => (
