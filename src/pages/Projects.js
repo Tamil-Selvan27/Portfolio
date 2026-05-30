@@ -7,33 +7,9 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: 'Project One',
-      description: 'An innovative web application with real-time features',
-      tech: ['React', 'Node.js', 'WebSocket'],
-      image: 'placeholder',
-      link: '#',
-      github: '#',
-    },
-    {
-      title: 'Project Two',
-      description: 'Mobile-first e-commerce platform with AI recommendations',
-      tech: ['React Native', 'Python', 'TensorFlow'],
-      image: 'placeholder',
-      link: '#',
-      github: '#',
-    },
-    {
-      title: 'Project Three',
-      description: '3D visualization tool for data analysis',
-      tech: ['Three.js', 'React', 'D3.js'],
-      image: 'placeholder',
-      link: '#',
-      github: '#',
-    },
-    {
-      title: 'Project Four',
-      description: 'Cloud-based collaboration platform',
-      tech: ['Vue.js', 'Firebase', 'Tailwind'],
+      title: 'Todo App',
+      description: 'A productivity-focused todo list app with add, edit, and remove functionality.',
+      tech: ['React', 'JavaScript', 'CSS'],
       image: 'placeholder',
       link: '#',
       github: '#',

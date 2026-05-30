@@ -13,7 +13,6 @@ const Navigation = ({ setCurrentPage }) => {
     { label: 'Projects', path: '/projects' },
     { label: 'Skills', path: '/skills' },
     { label: 'Contact', path: '/contact' },
-    { label: 'Articles', path: '/articles' },
     { label: 'Profiles', path: '/profiles' },
   ];
 

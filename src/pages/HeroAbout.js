@@ -75,6 +75,24 @@ const HeroAbout = () => {
     },
   };
 
+  const downloadResume = async () => {
+    try {
+      const response = await fetch('/resume.pdf');
+      if (!response.ok) throw new Error('Failed to download resume');
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Tamil_Selvan_Resume.pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="page-container hero-about">
       <GradientBlur position="top-left" color="linear-gradient(135deg, #667eea, #764ba2)" />
@@ -136,6 +154,12 @@ const HeroAbout = () => {
               <p>{achievement.desc}</p>
             </motion.div>
           ))}
+        </motion.div>
+
+        <motion.div className="hero-actions" variants={itemVariants}>
+          <button type="button" onClick={downloadResume} className="resume-button">
+            Download Resume
+          </button>
         </motion.div>
 
         <motion.div variants={itemVariants}>

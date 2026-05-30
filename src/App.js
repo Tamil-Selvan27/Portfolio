@@ -7,7 +7,6 @@ import CTA from './pages/CTA';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
-import Articles from './pages/Articles';
 import CodingProfiles from './pages/CodingProfiles';
 import './App.css';
 
@@ -26,7 +25,6 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/articles" element={<Articles />} />
             <Route path="/profiles" element={<CodingProfiles />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
